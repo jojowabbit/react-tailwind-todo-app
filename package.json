@@ -1,0 +1,46 @@
+{
+  "name": "todo-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "uuid": "^8.2.0"
+  },
+  "scripts": {
+    "start:react": "cross-env react-scripts start",
+    "start": "npm-run-all -p watch:css start:react",
+    "watch:css": "postcss -w src/styles/tailwind.css -o src/styles/main.css",
+    "build:css": "postcss src/styles/tailwind.css -o src/styles/main.css",
+    "prebuild": "cross-env NODE_ENV=production npm run build:css",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.4",
+    "cross-env": "^7.0.2",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.4.6"
+  }
+}
