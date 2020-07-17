@@ -33,9 +33,9 @@ export default class TodoInput extends React.Component {
             <form onSubmit={this.handleSubmit}>
                 <div className="flex justify-around">
                     <input name="text" value={this.state.text} onChange={this.handleChange} placeholder="todo..." className='w-full px-4 rounded-full text-gray-900' />
-                    <button onClick={this.handleSubmit} className="mr-auto px-4 py-1 ml-2 bg-pink-400 border-2 rounded-md">Add</button>
+                    <button onClick={this.handleSubmit} className="mr-auto px-4 py-1 ml-4 bg-pink-400 hover:bg-pink-500 border-2 rounded-md">Add</button>
                 </div>
-                <div className="flex justify-between items-center py-2">
+                <div className="flex flex-wrap justify-around items-center py-2">
                     <p>Filter by:</p>
                     <label>
                             <input checked={this.state.filter === 'all'} value='all' onChange={this.handleChange}  name="filter" type="radio" /> All
